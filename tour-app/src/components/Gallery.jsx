@@ -17,13 +17,15 @@ const Gallery = ({ tours, setTours, onRemove }) => {
           const trimmed = data.results.map((tour) => ({
             id: tour.id,
             name: tour.name,
-            info: `Download count: ${tour.download_count}.Subjects ${tour.subjects.slice(0,3).join(", ")}`,
+            info: `Download count: ${tour.download_count}`,
             price: tour.price,
             image: tour.image,
           }));
           setTours(trimmed); // Save data to global state
           setLoading(false); // Set loading to false
         } catch (error) {
+            console.log("Error fetching tours:", error);
+          // Handle error state
           setError(true); // If fetch fails, show error
           setLoading(false); 
         }

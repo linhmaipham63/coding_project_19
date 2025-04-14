@@ -13,7 +13,7 @@ const TourCard = ({id, name, info, price, image, onRemove}) => {
             <h4>${price}</h4>
             <p>
               {/* Show full info if readMore is tru, other a slice */}
-              {readMore ? info : `${info.substring(0, 100)}... `}  
+              {(readMore ? info : info.slice(0, 100) + "... ")}  
               <button onClick={() => setReadMore(!readMore)}>
                 {/* Toggle button text */}
                 {readMore ? 'Show Less' : 'Read More'}
