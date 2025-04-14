@@ -25,7 +25,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
           setLoading(false); // Set loading to false
         } catch (error) {
             console.log("Error fetching tours:", error);
-          // Handle error state
+          // Loading and error states 
           setError(true); // If fetch fails, show error
           setLoading(false); 
         }
