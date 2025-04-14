@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState} from "React";
 
 // TourCard renders individual tour details
 const TourCard = ({id, name, info, price, image, onRemove}) => {
